@@ -11,4 +11,9 @@ $(() => {
 // const example = require('./example')
 
 // use require without a reference to ensure a file is bundled
-require('./example')
+// const backGround =
+const events = require('./example')
+
+$(() => {
+  $('div').on('click', events.putXAndO)
+})
