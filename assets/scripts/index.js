@@ -16,4 +16,6 @@ const events = require('./events')
 
 $(() => {
   $('div').on('click', events.gamePlay)
+//  $('div').mouseenter(events.mouseEnters)
+//  $('div').mouseleave(events.mouseLeaves)
 })
