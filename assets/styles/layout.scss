@@ -9,7 +9,9 @@ html {
 body {
   height: 100%;
   width: 100%;
+}
 
+.game-board {
   :nth-child(3n+1) {
     border-left: 0;
     margin-left: 33%;
@@ -29,16 +31,16 @@ body {
     border-bottom: 0;
     margin-bottom: auto;
   }
-}
 
-div {
-  border: 1px solid $game-board-color;
-  float: left;
-  font-size: 180px;
-  height: 200px;
-  line-height: 100%;
-  text-align: center;
-  width: 200px;
+  div {
+    border: 1px solid $game-board-color;
+    float: left;
+    font-size: 180px;
+    height: 200px;
+    line-height: 100%;
+    text-align: center;
+    width: 200px;
+  }
 }
 
 .beg-row {
