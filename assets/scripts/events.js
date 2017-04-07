@@ -19,7 +19,7 @@ const gamePlay = function () {
     board += 1
     $(this).off('click')
     console.log(board)
-    // currentO.push(Number(this.id))
+    // const ind = Number($(this).id)
   }
 }
 
@@ -105,7 +105,8 @@ const checkWinGame = function () {
 }
 module.exports = {
   gamePlay,
-  checkWinGame
+  checkWinGame,
+  gameOn
 //  mouseEnters,
 //  mouseLeaves
 }

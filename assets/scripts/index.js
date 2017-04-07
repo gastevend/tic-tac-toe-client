@@ -19,6 +19,7 @@ const gameHandler = require('./gameApi/game-events')
 $(() => {
   $('.game-board > div').on('click', events.gamePlay)
   $('.game-board > div').on('click', events.checkWinGame)
+  $('.square').on('click', gameHandler.onUpdateBoard)
   authHandler.addHandlers()
   gameHandler.addHandlers()
 })
