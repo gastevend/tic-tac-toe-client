@@ -25,26 +25,31 @@ const joinGame = () => {
   })
 }
 
-const updateBoard = (index, value, gameOver) => {
+const updateBoard = (data) => {
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: {
-      'game': {
-        'cell': {
-          'index': index,
-          'value': value
-        },
-        'over': gameOver
-      }
-    }
+    data
   })
 }
+
+const indexGame = () => {
+  return $.ajax({
+    url: config.apiOrigin + '/games',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: store.user.token
+  })
+}
+
 module.exports = {
   newGame,
   joinGame,
-  updateBoard
+  updateBoard,
+  indexGame
 }

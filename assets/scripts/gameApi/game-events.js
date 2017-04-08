@@ -22,24 +22,29 @@ const onjoinGame = function (event) {
   .catch(ui.joinGameFailure)
 }
 
-const onUpdateBoard = function () {
+const onUpdateBoard = function (data) {
+  data = events.data
+  console.log('data is ', data)
   console.log('onUpdateBoard was clicked')
-  console.log($(this).attr('id'))
-  console.log($(this).html())
-  const index = $(this).attr('id')
-  const value = $(this).html()
-  const gameOver = !events.gameOn
-  api.updateBoard(index, value, gameOver)
+  api.updateBoard(data)
     .then(ui.updateBoardSuccess)
     .catch(ui.updateBoardFailure)
 }
 
+const onIndexGame = function () {
+  console.log('Im going to go fetch this game for you')
+  api.indexGame()
+    .then(ui.indexGameSuccess)
+    .catch(ui.indexGameFailure)
+}
+
 const addHandlers = () => {
   $('#new-game').on('submit', onNewGame)
+  $('#new-game').on('submit', onIndexGame)
   $('#join-game').on('submit', onjoinGame)
+  $('.square').on('click', onUpdateBoard)
 }
 
 module.exports = {
-  addHandlers,
-  onUpdateBoard
+  addHandlers
 }

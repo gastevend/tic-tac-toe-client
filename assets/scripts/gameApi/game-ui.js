@@ -29,11 +29,21 @@ const updateBoardFailure = error => {
   console.error('updateBoardFailure ran. error is ', error)
 }
 
+const indexGameSuccess = data => {
+  console.log('indexGameSuccess ran. data is ', data)
+}
+
+const indexGameFailure = error => {
+  console.error('indexGameFailure ran. error is ', error)
+}
+
 module.exports = {
   newGameSuccess,
   newGameFailure,
   joinGameSuccess,
   joinGameFailure,
   updateBoardSuccess,
-  updateBoardFailure
+  updateBoardFailure,
+  indexGameSuccess,
+  indexGameFailure
 }
