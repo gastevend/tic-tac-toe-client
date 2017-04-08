@@ -15,8 +15,6 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('sign in ran!')
-
   const data = getFormFields(this)
   api.signIn(data)
     .then(ui.signInSuccess)
@@ -25,7 +23,6 @@ const onSignIn = function (event) {
 
 const onSignOut = function () {
   event.preventDefault()
-  console.log('sign out ran')
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
@@ -33,7 +30,6 @@ const onSignOut = function () {
 
 const onChangePassword = function () {
   event.preventDefault()
-  console.log('onChangePassword is running')
   const data = getFormFields(this)
   api.changePassword(data)
     .then(ui.changePasswordSuccess)

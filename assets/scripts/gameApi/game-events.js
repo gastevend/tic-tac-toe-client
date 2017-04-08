@@ -1,13 +1,13 @@
 'use strict'
 
-// const getFormFields = require(`../../../lib/get-form-fields`)
-
 const api = require('./game-api')
 const ui = require('./game-ui')
 const events = require('../events')
 
 const onNewGame = function (event) {
-  console.log('onNewGame was clicked')
+  $('.square').empty()
+  events.resetVar()
+  events.data.game.over = false
   event.preventDefault()
   api.newGame()
     .then(ui.newGameSuccess)
@@ -24,7 +24,6 @@ const onjoinGame = function (event) {
 
 const onUpdateBoard = function (data) {
   data = events.data
-  console.log('data is ', data)
   console.log('onUpdateBoard was clicked')
   api.updateBoard(data)
     .then(ui.updateBoardSuccess)
@@ -39,10 +38,12 @@ const onIndexGame = function () {
 }
 
 const addHandlers = () => {
+  $('.square').on('click', events.gamePlay)
+  $('.square').on('click', events.checkWinGame)
+  $('.square').on('click', onUpdateBoard)
   $('#new-game').on('submit', onNewGame)
   $('#new-game').on('submit', onIndexGame)
   $('#join-game').on('submit', onjoinGame)
-  $('.square').on('click', onUpdateBoard)
 }
 
 module.exports = {
