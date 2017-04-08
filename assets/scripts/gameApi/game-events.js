@@ -9,6 +9,7 @@ const onNewGame = function (event) {
   events.resetVar()
   events.data.game.over = false
   event.preventDefault()
+  $('.win-banner').hide()
   api.newGame()
     .then(ui.newGameSuccess)
     .catch(ui.newGamweFailure)

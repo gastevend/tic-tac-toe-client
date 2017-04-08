@@ -18,4 +18,5 @@ const gameHandler = require('./gameApi/game-events')
 $(() => {
   authHandler.addHandlers()
   gameHandler.addHandlers()
+  $('.win-banner').hide()
 })

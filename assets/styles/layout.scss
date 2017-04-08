@@ -46,3 +46,16 @@ body {
 .beg-row {
   clear: both;
 }
+
+.win-banner {
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  height: 600px;
+  left: 33%;
+  line-height: 100%;
+  position: relative;
+  text-align: center;
+  width: 600px;
+  z-index: 1;
+}
