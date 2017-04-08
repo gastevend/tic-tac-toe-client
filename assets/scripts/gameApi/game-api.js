@@ -47,9 +47,21 @@ const indexGame = () => {
   })
 }
 
+/* const numberOfGames = () => {
+  return $.ajax({
+    url: config.apiOrigin + '/games[?over=true]',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: store.user.token
+  })
+} */
+
 module.exports = {
   newGame,
   joinGame,
   updateBoard,
   indexGame
+  // numberOfGames
 }

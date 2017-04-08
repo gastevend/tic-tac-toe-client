@@ -38,6 +38,13 @@ const onIndexGame = function () {
     .catch(ui.indexGameFailure)
 }
 
+/* const onNumberOfGames = function () {
+  console.log('im getting the number of games')
+  api.numberOfGames()
+    .then(ui.onNumberOfGamesSuccess)
+    .catch(ui.onNumberOfGamesFailure)
+} */
+
 const addHandlers = () => {
   $('.square').on('click', events.gamePlay)
   $('.square').on('click', events.checkWinGame)
@@ -45,6 +52,7 @@ const addHandlers = () => {
   $('#new-game').on('submit', onNewGame)
   $('#new-game').on('submit', onIndexGame)
   $('#join-game').on('submit', onjoinGame)
+  // $('#new-game').on('submit', onNumberOfGames)
 }
 
 module.exports = {

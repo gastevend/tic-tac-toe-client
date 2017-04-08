@@ -15,8 +15,8 @@ require('./example')
 const authHandler = require('./auth/auth-events')
 const gameHandler = require('./gameApi/game-events')
 
+$('.win-banner').hide()
 $(() => {
   authHandler.addHandlers()
   gameHandler.addHandlers()
-  $('.win-banner').hide()
 })
