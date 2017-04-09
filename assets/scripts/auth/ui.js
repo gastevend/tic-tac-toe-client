@@ -15,6 +15,7 @@ const signInSuccess = data => {
   $('#sign-out').show()
   $('#change-password').show()
   $('#new-game').show()
+  $('#join-game').show()
   store.user = data.user
 }
 
@@ -28,6 +29,7 @@ const signOutSuccess = data => {
   $('#sign-out').hide()
   $('#change-password').hide()
   $('#new-game').hide()
+  $('#join-game').hide()
   console.log('signOutSuccess is running and nothing is returned')
   store.user = null
 }

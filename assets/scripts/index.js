@@ -19,6 +19,7 @@ $('#sign-out').hide()
 $('.win-banner').hide()
 $('#change-password').hide()
 $('#new-game').hide()
+$('#join-game').hide()
 
 $(() => {
   authHandler.addHandlers()

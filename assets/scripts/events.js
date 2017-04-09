@@ -39,70 +39,72 @@ const gamePlay = function () {
 const checkWinGame = function () {
   data.game.cell.index = $(this).attr('id')
   data.game.cell.value = $(this).html()
-  if (($('#0').html() + $('#1').html() + $('#2').html() === playerX) || ($('#0').html() + $('#1').html() + $('#2').html() === playerO)) {
-    if (turn === 'O') {
-      turn = 'X'
-    } else {
-      turn = 'O'
+  if (data.game.over === false) {
+    if (($('#0').html() + $('#1').html() + $('#2').html() === playerX) || ($('#0').html() + $('#1').html() + $('#2').html() === playerO)) {
+      if (turn === 'O') {
+        turn = 'X'
+      } else {
+        turn = 'O'
+      }
+      $('.win-banner').show().html(turn + ' wins')
+      data.game.over = true
+    } else if (($('#3').html() + $('#4').html() + $('#5').html() === playerX) || ($('#3').html() + $('#4').html() + $('#5').html() === playerO)) {
+      if (turn === 'O') {
+        turn = 'X'
+      } else {
+        turn = 'O'
+      }
+      $('.win-banner').show().html(turn + ' wins')
+      data.game.over = true
+    } else if (($('#6').html() + $('#7').html() + $('#8').html() === playerX) || ($('#6').html() + $('#7').html() + $('#8').html() === playerO)) {
+      if (turn === 'O') {
+        turn = 'X'
+      } else {
+        turn = 'O'
+      }
+      $('.win-banner').show().html(turn + ' wins')
+      data.game.over = true
+    } else if (($('#0').html() + $('#3').html() + $('#6').html() === playerX) || ($('#0').html() + $('#3').html() + $('#6').html() === playerO)) {
+      if (turn === 'O') {
+        turn = 'X'
+      } else {
+        turn = 'O'
+      }
+      $('.win-banner').show().html(turn + ' wins')
+      data.game.over = true
+    } else if (($('#1').html() + $('#4').html() + $('#7').html() === playerX) || ($('#1').html() + $('#4').html() + $('#7').html() === playerO)) {
+      if (turn === 'O') {
+        turn = 'X'
+      } else {
+        turn = 'O'
+      }
+      $('.win-banner').show().html(turn + ' wins')
+      data.game.over = true
+    } else if (($('#2').html() + $('#5').html() + $('#8').html() === playerX) || ($('#2').html() + $('#5').html() + $('#8').html() === playerO)) {
+      if (turn === 'O') {
+        turn = 'X'
+      } else {
+        turn = 'O'
+      }
+      $('.win-banner').show().html(turn + ' wins')
+      data.game.over = true
+    } else if (($('#0').html() + $('#4').html() + $('#8').html() === playerX) || ($('#0').html() + $('#4').html() + $('#8').html() === playerO)) {
+      if (turn === 'O') {
+        turn = 'X'
+      } else {
+        turn = 'O'
+      }
+      $('.win-banner').show().html(turn + ' wins')
+      data.game.over = true
+    } else if (($('#2').html() + $('#4').html() + $('#6').html() === playerX) || ($('#2').html() + $('#4').html() + $('#6').html() === playerO)) {
+      if (turn === 'O') {
+        turn = 'X'
+      } else {
+        turn = 'O'
+      }
+      $('.win-banner').show().html(turn + ' wins')
+      data.game.over = true
     }
-    $('.win-banner').show().html(turn + ' wins')
-    data.game.over = true
-  } else if (($('#3').html() + $('#4').html() + $('#5').html() === playerX) || ($('#3').html() + $('#4').html() + $('#5').html() === playerO)) {
-    if (turn === 'O') {
-      turn = 'X'
-    } else {
-      turn = 'O'
-    }
-    $('.win-banner').show().html(turn + ' wins')
-    data.game.over = true
-  } else if (($('#6').html() + $('#7').html() + $('#8').html() === playerX) || ($('#6').html() + $('#7').html() + $('#8').html() === playerO)) {
-    if (turn === 'O') {
-      turn = 'X'
-    } else {
-      turn = 'O'
-    }
-    $('.win-banner').show().html(turn + ' wins')
-    data.game.over = true
-  } else if (($('#0').html() + $('#3').html() + $('#6').html() === playerX) || ($('#0').html() + $('#3').html() + $('#6').html() === playerO)) {
-    if (turn === 'O') {
-      turn = 'X'
-    } else {
-      turn = 'O'
-    }
-    $('.win-banner').show().html(turn + ' wins')
-    data.game.over = true
-  } else if (($('#1').html() + $('#4').html() + $('#7').html() === playerX) || ($('#1').html() + $('#4').html() + $('#7').html() === playerO)) {
-    if (turn === 'O') {
-      turn = 'X'
-    } else {
-      turn = 'O'
-    }
-    $('.win-banner').show().html(turn + ' wins')
-    data.game.over = true
-  } else if (($('#2').html() + $('#5').html() + $('#8').html() === playerX) || ($('#2').html() + $('#5').html() + $('#8').html() === playerO)) {
-    if (turn === 'O') {
-      turn = 'X'
-    } else {
-      turn = 'O'
-    }
-    $('.win-banner').show().html(turn + ' wins')
-    data.game.over = true
-  } else if (($('#0').html() + $('#4').html() + $('#8').html() === playerX) || ($('#0').html() + $('#4').html() + $('#8').html() === playerO)) {
-    if (turn === 'O') {
-      turn = 'X'
-    } else {
-      turn = 'O'
-    }
-    $('.win-banner').show().html(turn + ' wins')
-    data.game.over = true
-  } else if (($('#2').html() + $('#4').html() + $('#6').html() === playerX) || ($('#2').html() + $('#4').html() + $('#6').html() === playerO)) {
-    if (turn === 'O') {
-      turn = 'X'
-    } else {
-      turn = 'O'
-    }
-    $('.win-banner').show().html(turn + ' wins')
-    data.game.over = true
   }
   if (board >= 9 && data.game.over === false) {
     $('.win-banner').show().html('DRAW!!!')
