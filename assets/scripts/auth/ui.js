@@ -13,6 +13,8 @@ const signUpFailure = (error) => {
 const signInSuccess = data => {
   console.log('signInSuccess ran. data is ', data)
   $('#sign-out').show()
+  $('#change-password').show()
+  $('#new-game').show()
   store.user = data.user
 }
 
@@ -24,6 +26,8 @@ const signOutSuccess = data => {
   $('.xwins').html('0')
   $('.owins').html('0')
   $('#sign-out').hide()
+  $('#change-password').hide()
+  $('#new-game').hide()
   console.log('signOutSuccess is running and nothing is returned')
   store.user = null
 }
