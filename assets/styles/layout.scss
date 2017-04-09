@@ -95,3 +95,10 @@ button,
 .form-button-html {
   margin: 0 5px 0 0;
 }
+
+.error {
+  color: $red;
+  display: inline;
+  position: relative;
+  top: 40px;
+}

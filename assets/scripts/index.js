@@ -21,6 +21,7 @@ $('#change-password').hide()
 $('#new-game').hide()
 $('#join-game').hide()
 $('.square').hide()
+$('.error').hide()
 
 $(() => {
   authHandler.addHandlers()

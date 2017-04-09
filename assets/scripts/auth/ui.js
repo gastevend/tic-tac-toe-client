@@ -15,11 +15,13 @@ const signInSuccess = data => {
   $('#sign-out').show()
   $('#change-password').show()
   $('#new-game').show()
+  $('.error').hide()
   store.user = data.user
 }
 
 const signInFailure = error => {
   console.error('signInFailure ran. error is ', error)
+  $('.error').show()
 }
 
 const signOutSuccess = data => {
