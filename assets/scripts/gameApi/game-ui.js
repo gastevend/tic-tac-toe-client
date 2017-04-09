@@ -5,6 +5,7 @@ const store = require('../store')
 const newGameSuccess = data => {
   console.log('newGameSuccess ran. data is ', data)
   store.game = data.game
+  $('.square').show()
 }
 
 const newGameFailure = error => {
