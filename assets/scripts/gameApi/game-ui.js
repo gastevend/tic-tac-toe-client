@@ -39,7 +39,6 @@ const indexGameSuccess = data => {
   for (let i = 0; i < data.games.length; i++) {
     if (data.games[i].over === true) {
       for (let j = 0; j < 1; j++) {
-        console.log('thisfourloopisrunning')
         if (data.games[i].cells[0] === x && data.games[i].cells[1] === x && data.games[i].cells[2] === x) {
           gameswonx += 1
         } else if (data.games[i].cells[3] === x && data.games[i].cells[4] === x && data.games[i].cells[5] === x) {
@@ -76,8 +75,8 @@ const indexGameSuccess = data => {
       }
     }
   }
-  console.log(gameswonx)
-  console.log(gameswono)
+  $('.xwins').html(gameswonx)
+  $('.owins').html(gameswono)
 }
 
 const indexGameFailure = error => {
