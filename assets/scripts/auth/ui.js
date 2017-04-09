@@ -20,6 +20,8 @@ const signInFailure = error => {
 }
 
 const signOutSuccess = data => {
+  $('.xwins').html('0')
+  $('.owins').html('0')
   console.log('signOutSuccess is running and nothing is returned')
   store.user = null
 }
