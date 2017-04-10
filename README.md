@@ -11,9 +11,9 @@ HTML, CSS, SASS, Javascript, AJAX, JQuery, and GA Tic-Tac-Toe API.
 
 
 ## Project Planning
-I started out with some wire frames that can be seen [here] (https://github.com/gastevend/wireframes).
+I started out with some wire frames that can be seen [here](https://github.com/gastevend/wireframes).
 I then started out by writing some user stories that I could follow along with
-step by step in order to keep by game on track. Can be found [here] (https://github.com/gastevend/wireframes/blob/master/User%20Stories)
+step by step in order to keep by game on track. Can be found [here](https://github.com/gastevend/wireframes/blob/master/User%20Stories)
 I started with just simply making the board render in the browser so I had
 somewhere to start. Next, I then wrote the game logic. Just a note.. something
 I would have done differently in planning would be to set up my api first to get
