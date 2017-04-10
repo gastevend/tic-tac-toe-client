@@ -25,13 +25,10 @@ const gamePlay = function () {
       $(this).html('X')
       turn = 'O'
       board += 1
-      console.log(board)
     } else {
       $(this).html('O')
       turn = 'X'
       board += 1
-      console.log(board)
-      // const ind = Number($(this).id)
     }
   }
 }

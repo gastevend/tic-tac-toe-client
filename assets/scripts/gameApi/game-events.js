@@ -16,7 +16,6 @@ const onNewGame = function (event) {
 }
 
 const onjoinGame = function (event) {
-  console.log('onJoinGame was clicked')
   event.preventDefault()
   api.joinGame()
   .then(ui.joinGameSuccess)
@@ -25,21 +24,18 @@ const onjoinGame = function (event) {
 
 const onUpdateBoard = function (data) {
   data = events.data
-  console.log('onUpdateBoard was clicked')
   api.updateBoard(data)
     .then(ui.updateBoardSuccess)
     .catch(ui.updateBoardFailure)
 }
 
 const onIndexGame = function () {
-  console.log('Im going to go fetch this game for you')
   api.indexGame()
     .then(ui.indexGameSuccess)
     .catch(ui.indexGameFailure)
 }
 
 /* const onNumberOfGames = function () {
-  console.log('im getting the number of games')
   api.numberOfGames()
     .then(ui.onNumberOfGamesSuccess)
     .catch(ui.onNumberOfGamesFailure)

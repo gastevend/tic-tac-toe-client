@@ -3,40 +3,32 @@
 const store = require('../store')
 
 const newGameSuccess = data => {
-  console.log('newGameSuccess ran. data is ', data)
   store.game = data.game
   $('.square').show()
 }
 
-const newGameFailure = error => {
-  console.error('newGameFailure ran. error is ', error)
+const newGameFailure = data => {
 }
 
 const joinGameSuccess = data => {
-  console.log('joinGameSuccess ran. data is ', data)
   store.game = data.game
 }
 
-const joinGameFailure = error => {
-  console.error('joinGameFailure ran. error is ', error)
+const joinGameFailure = data => {
 }
 
 const updateBoardSuccess = data => {
-  console.log('updateBoardSuccess ran. data is ', data)
   store.game = data.game
 }
 
-const updateBoardFailure = error => {
-  console.error('updateBoardFailure ran. error is ', error)
+const updateBoardFailure = data => {
 }
 
 const indexGameSuccess = data => {
-  console.log('indexGameSuccess ran. data is ', data)
   const x = 'X'
   const o = 'O'
   let gameswonx = 0
   let gameswono = 0
-  // console.log(data.games.over)
   for (let i = 0; i < data.games.length; i++) {
     if (data.games[i].over === true) {
       for (let j = 0; j < 1; j++) {
@@ -80,8 +72,7 @@ const indexGameSuccess = data => {
   $('.owins').html(gameswono)
 }
 
-const indexGameFailure = error => {
-  console.error('indexGameFailure ran. error is ', error)
+const indexGameFailure = data => {
 }
 
 module.exports = {
