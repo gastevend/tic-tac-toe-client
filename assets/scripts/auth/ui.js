@@ -13,6 +13,8 @@ const signInSuccess = data => {
   $('#change-password').show()
   $('#new-game').show()
   $('.error').hide()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
   store.user = data.user
 }
 
@@ -28,6 +30,8 @@ const signOutSuccess = data => {
   $('#new-game').hide()
   $('#join-game').hide()
   $('.square').hide()
+  $('#sign-up').show()
+  $('#sign-in').show()
   store.user = null
 }
 
