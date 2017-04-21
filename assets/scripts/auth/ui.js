@@ -3,9 +3,12 @@
 const store = require('../store')
 
 const signUpSuccess = (data) => {
+  $('.signuperror').hide()
+  $('.error').hide()
 }
 
 const signUpFailure = (data) => {
+  $('.signuperror').show()
 }
 
 const signInSuccess = data => {
@@ -15,6 +18,7 @@ const signInSuccess = data => {
   $('.error').hide()
   $('#sign-up').hide()
   $('#sign-in').hide()
+  $('.signuperror').hide()
   store.user = data.user
 }
 
@@ -32,6 +36,7 @@ const signOutSuccess = data => {
   $('.square').hide()
   $('#sign-up').show()
   $('#sign-in').show()
+  $('.changepassworderror').hide()
   store.user = null
 }
 
@@ -39,9 +44,11 @@ const signOutFailure = data => {
 }
 
 const changePasswordSuccess = data => {
+  $('.changepassworderror').hide()
 }
 
 const changePasswordFailure = data => {
+  $('.changepassworderror').show()
 }
 
 module.exports = {

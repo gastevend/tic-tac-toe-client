@@ -10,6 +10,7 @@ const onNewGame = function (event) {
   events.data.game.over = false
   event.preventDefault()
   $('.win-banner').hide()
+  $('.changepassworderror').hide()
   api.newGame()
     .then(ui.newGameSuccess)
     .catch(ui.newGamweFailure)
